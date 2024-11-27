@@ -50,7 +50,7 @@ const Sidebar = () => {
         <div className="sidebar_buttons_container">
                   
            <button 
-      onClick={()=> setActive("dashboard")} 
+      onClick={()=> [setActive("dashboard"), navigate("/dashboard/dashboard")]} 
       className={`sidebar_btn ${active===`dashboard`? 'active' : ''}`}
     >
       <span>
@@ -61,7 +61,7 @@ const Sidebar = () => {
 
               
     <button 
-      onClick={()=> setActive("users")} 
+      onClick={()=> [setActive("users"), navigate("/dashboard/users")]} 
       className={`sidebar_btn ${active===`users` ? 'active' : ''}`}
     >
       <span>
@@ -72,7 +72,7 @@ const Sidebar = () => {
 
               
     <button 
-      onClick={()=> setActive("inbox")} 
+      onClick={()=> [setActive("inbox"), navigate("/dashboard/inbox")]} 
       className={`sidebar_btn ${active===`inbox` ? 'active' : ''}`}
     >
       <span>
