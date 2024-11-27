@@ -1,0 +1,952 @@
+.admin_mainSection_container {
+    /* background: linear-gradient(to top right, #2e2e3a, #454454); */
+}
+ .admin_container {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 18% 82%;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 14px black;
+}
+
+/* Main Section css and icon design dashboard */
+ .dashboard_main_section_container {
+    height: 100vh;
+    background: white;
+}  
+
+
+
+
+
+/* Styles for the icons container at the top-right */
+.dashboard_main_section_container_icons {
+    position: absolute; /* Positioned relative to the parent container */
+    top: 7px; /* Adjust distance from the top */
+    right: 30px; /* Adjust distance from the right */
+    display: flex;
+    flex-direction: row; /* Icons aligned horizontally */
+    align-items: center;
+    gap: 10px; /* Space between icons */
+    padding: 6px; /* Padding inside the box */
+    border: 2px solid #ddd; /* Border lines */
+    border-radius: 6px; /* Rounded corners */
+    background-color: #fff; /* Background color for the box */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    z-index: 1000; /* Make sure it stays above other elements */
+  }
+  
+  /* Style for each icon */
+  .dashboard_main_section_container_icons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Smaller width */
+    height: 30px; /* Smaller height */
+    font-size: 18px; /* Reduce font size of the icon */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Default background color */
+    color: #333; /* Default icon color */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover effect */
+  .dashboard_main_section_container_icons .icon:hover {
+    background-color: #007bff; /* Hover background color */
+    color: white; /* Hover icon color */
+  }
+  
+  /* Active icon state */
+  .dashboard_main_section_container_icons .icon.active {
+    background-color: #28a745; /* Active background color */
+    color: white; /* Active icon color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for emphasis */
+  }
+  
+  /* Avatar style (if present) */
+  .dashboard_main_section_container_icons .avatar {
+    width: 30px; /* Smaller avatar size */
+    height: 30px; /* Smaller avatar size */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f0f0;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mail css */
+.admin_mail_container_inbox_table_headers {
+    margin: 5px 35px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.admin_mail_container_inbox_table_headers > p {
+    margin: 0;
+    font-size: 16px;
+    padding: 4px 5px;
+    background: rgb(34, 32, 69);
+    color: rgb(224, 224, 224);
+    /* border: 0.5px solid rgba(255, 255, 255, 0.788); */
+}
+.admin_mail_container_inbox_table_headers_username {
+    width: 22.7vw;
+}
+.admin_mail_container_inbox_table_headers_email {
+    width: 34.3vw;
+}
+.admin_mail_container_inbox_table_headers_time {
+    width: 13vw;
+}
+.admin_mail_container_inbox_table_headers_actions {
+    width: 7vw;
+}
+.mail_container {
+    padding: 5px 25px;
+    padding-bottom: 30px;
+    display: flex;
+    height: 84vh;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: auto;
+    scrollbar-color: #123e97 #ffffff;
+}
+
+.mail_container::-webkit-scrollbar {
+    width: 16px;
+}
+
+.mail_container::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.mail_container::-webkit-scrollbar-thumb {
+    background-color: #123e97;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+.no_mails_container {
+    display: flex;
+    justify-content: center;
+}
+.no_mails_container > p {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 40px;
+}
+.individual_email {
+    width: 100%;
+    /* border-radius: 10px; */
+    /* margin-top: 10px; */
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.174);
+    /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.126); */
+}
+.mail_not_read {
+    /* background: black;
+    color: white; */
+}
+.mailbox_sub_desc {
+    border-radius: 5px;
+    color: black;
+    margin-top: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.183);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.11);
+}
+.mailbox_sub_desc_content {
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+}
+.mailbox_sub_desc_content > p {
+    margin: 0;
+}
+.mailbox_sub_desc_title {
+    display: flex;
+    align-items: center;
+}
+
+.mailbox_sub_desc_title > p {
+    margin: 0;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgb(246, 246, 246);
+    color: rgba(0, 0, 0, 0.604);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow:
+        rgb(204, 219, 232) 3px 3px 6px 0px inset,
+        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.individual_email_name_email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+.individual_email_name_email > h3 {
+    margin: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.individual_email_name_email > p {
+    margin: 0;
+}
+.inidividual_email_email {
+    width: 300px;
+}
+.individual_email_time_btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 290px;
+    margin-right: 5px;
+    justify-content: space-between;
+}
+.show_share_delete_container {
+    width: 40%;
+    border-radius: 50px;
+    align-items: center;
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.205); */
+    /* padding: 0 10px; */
+    display: flex;
+    justify-content: space-between;
+}
+.individual_email_section_one {
+    display: flex;
+    justify-content: space-between;
+}
+.individual_mail_toggle_icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+.individual_mail_subject {
+    margin-left: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.538);
+}
+.individual_mail_body {
+    margin-left: 15px;
+}
+.center_icons_individual_mail {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    gap: 4px;
+}
+.individual_mail_delete_icon {
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+    cursor: pointer;
+}
+.mail_loader_container {
+    width: 100%;
+    height: 100%;
+}
+/* search bar */
+.mail_search_box_container {
+    width: 100%;
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    padding-bottom: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.mail_search_box_refresh_container {
+    display: flex;
+    align-items: center;
+}
+.mail_search_box_refresh_container > span {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+.mail_search_recycle_bin_container > span {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    color: red;
+}
+.mail_settings_icon_container {
+    margin-left: 30px;
+    font-size: 20px;
+}
+.mail_settings_icon {
+    cursor: pointer;
+}
+.mail_settings_icon:hover {
+    color: red;
+}
+.mail_search_box {
+    min-width: 72%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: 2px solid rgba(128, 128, 128, 0.396);
+    border-radius: 50px;
+    padding: 0 15px;
+}
+.mail_search_box > input {
+    width: 100%;
+    padding: 4px 5px;
+    border: none;
+    font-size: 18px;
+}
+.mail_search_box input:focus {
+    outline: none;
+}
+
+.mail_search_box > input::placeholder {
+    color: rgba(0, 0, 0, 0.295);
+}
+.mail_search_icon {
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.individual_mail_reply_section {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.183);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.11);
+}
+.individual_mail_reply_section > p {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgb(246, 246, 246);
+    color: rgba(0, 0, 0, 0.604);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow:
+        rgb(204, 219, 232) 3px 3px 6px 0px inset,
+        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.send_reply_btn_container {
+    display: flex;
+    justify-content: center;
+}
+.send_reply_btn_container > .send_reply_btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgb(25, 30, 49);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid black;
+    transition: all 0.1s ease-in-out;
+}
+.send_reply_btn:disabled {
+    border: 1px solid gray;
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    cursor: not-allowed;
+}
+.send_reply_btn:hover:not(:disabled) {
+    background:rgb(255, 255, 255);
+    color: black;
+}
+.individual_mail_reply_icon {
+    cursor: pointer;
+}
+.individual_mail_message_icon_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.mail_reply_text_area {
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.181);
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.mail_reply_text_area:focus {
+    border: 2px solid rgba(21, 0, 98, 0.528);
+}
+/* Delete popup */
+.delete_popup {
+    width: 100%;
+    height: 92%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999999;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(129, 82, 70, 0.087);
+}
+.delete_popup_container {
+    width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgb(64, 64, 64);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.442);
+}
+.delete_popup_delete_icon_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.delete_popup_delete_icon {
+    color: rgb(255, 0, 0);
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.497));
+    font-size: 40px;
+    margin: 10px 0;
+}
+.delete_popup_delete_message_container > h3 {
+    color: rgba(0, 0, 0, 0.587);
+    color: white;
+}
+.delete_popup_delete_btns_container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.delete_popup_delete_btns_container > button {
+    border: none;
+    cursor: pointer;
+    padding: 5px 0;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.402);
+}
+.delete_popup_delete_btns_container > button:first-child {
+    background: rgb(255, 0, 0);
+}
+.delete_popup_delete_btns_perm_del {
+    background: red;
+}
+.delete_popup_delete_btns_container > button:last-child {
+    border: 1px solid black;
+    background-color: rgb(235, 235, 235);
+    color: black;
+}
+/* Recycle bin */
+.mail_inbox_recyclebin_title_container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.183);
+}
+/* change color to display title */
+.mail_inbox_recyclebin_title_container > h3 {
+    padding: 10px 0;
+    padding-top: 15px;
+    display: flex;
+    font-size: 16px;
+    align-items: start;
+    margin-right: 40px;
+    gap: 3px;
+    color: rgba(255, 255, 255, 0.753);
+}
+.mail_inbox_recyclebin_to_home {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    left: 3%;
+}
+.mail_inbox_recyclebin_to_home_icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+}
+.mail_inbox_recyclebin_to_home_icon:hover {
+    color: black;
+}
+.mail_inbox_recyclebin_empty {
+    width: 100%;
+    height: 65vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.mail_inbox_recyclebin_empty > p:first-child {
+    margin: 0;
+    font-size: 200px;
+    font-weight: bolder;
+    letter-spacing: 0.4rem;
+    transform: translateY(70px);
+    color: rgba(0, 0, 0, 0.358);
+}
+.mail_inbox_recyclebin_empty > p:last-child {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.358);
+}
+.recybin_message_container {
+    height: 80vh;
+    overflow-y: scroll;
+    display: flex;
+    padding: 15px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* Email cred history */
+.emailCredHistoryPopUp_main_bg {
+    width: 100%;
+    height: 100%;
+}
+.emailCredHistory_title_container {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.209);
+}
+.emailCredHistory_title_container > span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.emailCredHistory_body_container {
+    height: 85vh;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.emailCredHistory_body_container::-webkit-scrollbar {
+    display: none;
+}
+.emailCredHistory_table_container {
+    margin-bottom: 700px;
+}
+
+.credHistory_tr_td_buttons_active {
+    padding: 5px 20px;
+    color: white;
+    background: rgb(0, 190, 0);
+    border: none;
+    font-size: 14px;
+    width: 100px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.507);
+}
+.credHistory_tr_td_buttons_inactive {
+    padding: 5px 20px;
+    font-size: 14px;
+    color: white;
+    background: rgb(231, 1, 1);
+    border: none;
+    width: 100px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.507);
+}
+.emailCredHistory_table_history_title {
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 7px;
+    color: rgba(0, 0, 0, 0.55);
+}
+.delete_mailcred_icon {
+    color: red;
+    cursor: pointer;
+}
+/* second tbale style */
+.admin_inbox_all_cred_container {
+    width: 900px;
+}
+
+.admin_inbox_all_cred_scrollable-table {
+    height: 550px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin_inbox_all_cred_scrollable-table::-webkit-scrollbar {
+    display: none;
+}
+
+.admin_inbox_all_cred_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin_inbox_all_cred_table,
+.admin_inbox_all_cred_table td,
+.admin_inbox_all_cred_table th {
+    padding: 15px;
+    border: 1px solid lightgray;
+}
+
+.admin_inbox_all_cred_table th {
+    background: rgb(18, 78, 101);
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: -1px;
+}
+
+.admin_inbox_all_cred_table td {
+    text-align: center;
+    font-size: 18px;
+}
+
+.admin_inbox_all_cred_table tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+
+.admin_inbox_all_cred_table tr:nth-child(even) {
+    background: rgba(233, 233, 247, 0.817);
+}
+/* admin mail cred slider */
+.admin_mail_cred_slider_container {
+    width: 100%;
+    height: 92vh;
+    overflow-x: hidden;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    z-index: 99999;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    animation: sliderParent 0.5s linear 0s forwards normal;
+}
+@keyframes sliderParent {
+    from {
+        display: none;
+        backdrop-filter: blur(0);
+    }
+    to {
+        display: grid;
+        backdrop-filter: blur(5px);
+    }
+}
+.admin_mail_cred_slider_container_hide {
+    animation: sliderParentHide 0.3s linear 0s forwards normal;
+}
+@keyframes sliderParentHide {
+    from {
+        display: grid;
+        backdrop-filter: blur(5px);
+    }
+    to {
+        display: none;
+        backdrop-filter: blur(0);
+    }
+}
+.admin_mail_cred_slider_left {
+    cursor: pointer;
+}
+.admin_mail_cred_slider_right {
+    background: white;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.18);
+    animation: sliderRightChild 0.2s linear 0s forwards normal;
+}
+@keyframes sliderRightChild {
+    from {
+        transform: translateX(100%);
+        box-shadow: 0;
+    }
+    to {
+        transform: translateX(0);
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.18);
+    }
+}
+.admin_mail_cred_slider_right_hide {
+    animation: sliderRightChildHide 0.2s linear 0s forwards normal;
+}
+@keyframes sliderRightChildHide {
+    from {
+        transform: translateX(0);
+        box-shadow: -8px 0 16px rgba(0, 0, 0, 0.312);
+    }
+    to {
+        transform: translateX(100%);
+        box-shadow: 0;
+    }
+}
+.admin_mail_cred_slider_right_close_container {
+    height: 6vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.181);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.admin_mail_cred_slider_right_close {
+    cursor: pointer;
+}
+.admin_mail_cred_slider_right_main_conatiner {
+    height: 82vh;
+    overflow-y: scroll;
+}
+.admin_mail_cred_slider_right_main_conatiner::-webkit-scrollbar {
+    display: none;
+}
+.admin_mail_cred_slider_right_loading {
+    height: 100%;
+    display: flex;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* mail cred fieds container */
+.admin_mail_cred_slider_right_main_fields_conatiner {
+    display: flex;
+    justify-content: center;
+}
+.admin_mail_cred_slider_right_main_note {
+    margin: 20px;
+    text-align: center;
+    line-height: 1.2rem;
+    font-size: 13px;
+    color: rgba(255, 0, 0, 0.847);
+}
+.admin_mail_cred_slider_right_main_fields_conatiner_section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.admin_mail_cred_slider_right_form_fields > label {
+    color: #67809a;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+}
+.admin_mail_cred_slider_right_form_fields > input {
+    margin: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    width: 100%;
+    background: #f5faff;
+}
+.actual_mail_cred_conatiner {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-direction: column;
+}
+.admin_mail_cred_slider_right_main_fields_conatiner_section > h4 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: -2px;
+    color: gray;
+}
+
+/* Sidebar css */
+.sidebar_container {
+    background: black;
+    height: 100vh; /* Fixed height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+     /* Prevent overflow issues */
+  }
+  
+/* .sidebar_title_second_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adds spacing between "Dashboard" and "Admin Panel" */
+  /* padding: 20px 0;  Optional padding for top and bottom spacing */
+
+
+/* .sidebar_title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white; */
+
+
+/*.admin_panel_title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  gap: 5px; /* Adjust spacing between the icon and text */
+
+
+
+
+  /* Style for the sidebar title */
+  .sidebar_title {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90%;
+  }
+  
+  .sidebar_title_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+  /* Style for buttons container */
+  .sidebar_buttons_container {
+    width: 100%; /* Full width of the sidebar */
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    color: white;
+    border: none;
+  }
+  
+  /* Style for the logout section */
+  .sidebar_lastsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  /* Tooltip container */
+  .tooltip-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  
+  .notititle {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .notititle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .notititle:active {
+    background-color: #003f7f;
+    transform: translateY(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure the sidebar stays consistent across all screens */
+  @media (max-height: 768px) {
+    .sidebar_container {
+      height: 100vh; /* Maintain viewport height */
+    }
+  }
+  
+  @media (min-height: 769px) {
+    .sidebar_container {
+      height: 100vh; /* Consistent height for larger screens */
+    }
+  }
+  .sidebar_lastsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 20px; /* Add spacing at the bottom */
+  }
+  
+  .notititle {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px; /* Extra spacing for the button itself */
+  }
+  
+  .notititle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .notititle:active {
+    background-color: #003f7f;
+    transform: translateY(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+/* .notibody div {
+    font-size: 14px;
+    font-weight: normal;
+    color: white;
+    padding: 10px;
+    background-color: #007BFF; /* Matching blue background for the email */
+    /* border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; */
+ 
+
+/* .notibody div span {
+    font-size: 14px;
+    font-weight: bold;
+} */

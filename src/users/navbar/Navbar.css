@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+.users_navbar_container {
+    grid-template-columns: 20% 60% 20%;
+    background-color: rgb(25, 30, 49);
+    position: relative;
+}
+.users_navbar_user_details {
+    display: flex;
+    flex-direction: column;
+}
+.users_navbar_user_details > p {
+    margin: 0;
+    font-size: 18px;
+}
+.users_navbar_container > div {
+    display: flex;
+    color: white;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.users_navbar_link {
+    margin: 0;
+    padding: 10px 30px;
+    font-size: 13px;
+    line-height: 1.7rem;
+    cursor: pointer;
+    background-color: rgb(25, 30, 49);
+    font-family: "Roboto", sans-serif;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: white;
+}
+.alluser_active_navbar {
+    background: rgb(255, 255, 255) !important;
+    /* color: rgb(42, 194, 0) !important; */
+    color: black !important;
+    font-weight: 500;
+}
+.users_navbar_link:hover {
+    background: rgb(255, 255, 255);
+    color: black;
+}
+.users_navbar_link_separator {
+    width: 1px;
+    height: 100%;
+    background: white;
+}
+/* serchbar style in the dahsboard graph */
+.users_small_graphs_searchbar_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70px;
+}
+.allusers_input-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.allusers_input-wrapper > div {
+    border-radius: 50px;
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.allusers_input-wrapper > div > input {
+    outline: none;
+    border: none;
+    padding: 3px 10px;
+    font-size: 12px;
+    width: 85%;
+}
+.allusers_input-wrapper > div > button {
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    background: white;
+    color: black;
+    width: 15%;
+}
+.users_nav_favorite_img_container {
+    width: 50px;
+    height: 48px;
+}
+.users_nav_favorite_img_container > img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+/* serchbar style in the dahsboard graph */
+
+/* mobile navbar style starts here */
+.users_mobile_navbar_container {
+    justify-content: space-between;
+    background-color: rgb(25, 30, 49);
+    position: relative;
+    width: 100vw;
+    color: white;
+    align-items: center;
+    padding: 0 30px;
+    user-select: none;
+}
+
+.users_mobile_navbar_container > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.users_mobile_navbar_left {
+    margin: 0;
+    padding: 13px 0;
+    display: flex;
+    gap: 4px;
+    font-size: 24px !important;
+}
+.users_mobile_navbar_right {
+    font-size: 30px;
+    cursor: pointer;
+}
+.users_mobile_navbar_show_menu {
+    width: 100%;
+    left: 0;
+    max-height: min-content;
+    position: absolute;
+    background: rgb(25, 30, 49);
+    bottom: -100%;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+}
+.users_mobile_navbar_show_menu > p {
+    margin: 0;
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.387);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.users_mobile_navbar_show_menu > p:hover {
+    color: white !important;
+    background: black !important;
+}
+.users_mobile_navbar_show_menu_logout_container {
+    padding: 10px 0;
+    background: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.users_mobile_navbar_show_menu_logout_container > button {
+    border-radius: 20px;
+    padding: 3px 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+    color: white;
+    background: transparent;
+}
+/* mobile navbar style ends here */
+
+/* mediaquery starts here */
+@media (width > 1450px) {
+    .users_mobile_navbar_container {
+        display: none;
+    }
+    .users_navbar_container {
+        display: grid;
+    }
+}
+@media (width < 1450px) {
+    .users_mobile_navbar_container {
+        display: flex;
+    }
+    .users_navbar_container {
+        display: none;
+    }
+}
+/* mediaquery ends here */
