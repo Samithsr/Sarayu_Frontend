@@ -10,9 +10,11 @@ const Dashboard = () => {
     data-aos-duration="300"
     data-aos-once="true"
     >
+
+      <DashboardCTitle title={"Dashboard"} icon={ MdSpaceDashboard} />
      
     </div> 
-  )
-}
+  );
+};
 
 export default Dashboard
