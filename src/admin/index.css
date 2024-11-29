@@ -950,3 +950,123 @@
     font-size: 14px;
     font-weight: bold;
 } */
+
+
+
+
+
+
+
+/* Employee topic craetion */
+
+/* Container Styling */
+/* Container Styling */
+.employee_topic_creation_header {
+    background-color: #f8f9fa; /* Light background for the header */
+    padding: 20px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Heading Styling */
+.employee_topic_creation_heading {
+    font-size: 24px; /* Large heading size */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* Dark text color */
+}
+
+/* Input Section */
+.input_employee_topic_creation input.input {
+    display: block;
+    width: 100%; /* Full width input */
+    max-width: 400px; /* Set a max width for better layout */
+    margin: 10px 0; /* Space between inputs */
+    padding: 12px 16px; /* Comfortable padding */
+    font-size: 16px;
+    color: #333; /* Text color */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.input_employee_topic_creation input.input:focus {
+    border-color: #007bff; /* Highlight border color on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Focus shadow */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Group Styling */
+.button_group {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* Common Button Styling */
+.button_group .btn {
+    padding: 12px 20px; /* Adjust padding for text */
+    font-size: 16px; /* Adjusted font size for text buttons */
+    color: #fff;
+    background-color: #007bff; /* Default blue color */
+    border: none;
+    border-radius: 30px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #28a745; /* Green color for Submit button */
+    font-size: 16px; /* Text size for Submit button */
+    padding: 12px 20px; /* Adjusted padding for text */
+}
+
+/* Button Hover and Active States */
+.button_group .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.button_group .btn:active {
+    background-color: #003f8a; /* Even darker blue when active */
+    transform: scale(0.95); /* Button press effect */
+}
+
+/* Specific Button Colors */
+.increase-btn {
+    background-color: #28a745; /* Green for Increase */
+}
+
+.decrease-btn {
+    background-color: #ffc107; /* Yellow for Decrease */
+}
+
+/* Submit Button Hover and Active States */
+.submit-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.submit-btn:active {
+    background-color: #1e7e34; /* Even darker green when active */
+}
+
+/* Hover and Active States for Increase and Decrease */
+.increase-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.decrease-btn:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.increase-btn:active {
+    background-color: #1e7e34; /* Darker green on active */
+}
+
+.decrease-btn:active {
+    background-color: #d39e00; /* Darker yellow on active */
+}

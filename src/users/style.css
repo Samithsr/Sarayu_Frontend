@@ -11,7 +11,7 @@
     padding-left: 15px;
     margin: 0;
     border-bottom: 1px solid rgba(187, 187, 187, 0.353);
-    background: white;
+    background: rgb(225, 224, 224);
     /* border-top-left-radius: 5px;
     border-top-right-radius: 5px; */
 }
@@ -21,13 +21,13 @@
     /* border-top-left-radius: 5px;
     border-top-right-radius: 5px; */
     padding: 10px;
-    height: 8vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.196);
     margin: 0;
-    background: white;
+    background: rgb(225, 224, 224);
     border-bottom: 1px solid rgba(187, 187, 187, 0.353);
 }
 .mail_header_cred_set_container > h2 {

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 .admin_create_supervisor_container {
     height: 92vh;
-     overflow-y: scroll; 
+     /* overflow-y: scroll;  */
     /* padding-bottom: 0 10px; */ 
 }
 .admin_create_supervisor_container::-webkit-scrollbar {
@@ -84,7 +84,7 @@
 .admin_users_switch_manager_supervisor_employee_container {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 5px;
     position: relative;
 }
 .admin_users_switch_manager_supervisor_employee_container_div {
@@ -142,7 +142,7 @@
         rgb(204, 219, 232) 3px 3px 6px 0px inset,
         rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
     padding: 0 5px;
-    margin: 20px;
+    /* margin: 20px; */
     border-radius: 20px;
 }
 .admin_create_supervisor_second_container > div:first-child {
@@ -295,6 +295,7 @@
     height: 80.5vh;
     width: 100%;
     z-index: 99999;
+    max-height: 10px;
     backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
@@ -302,7 +303,7 @@
 .admin_show_all_managers_second_popup_container {
     width: 90%;
     height: 77vh;
-    margin-top: 22px;
+    margin-top: 12px;
     position: relative;
 }
 .admin_show_all_managers_second_popup_table {
